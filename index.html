@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>destinedsmile | Technical Artist | VFX Artist</title>
+  <meta name="description" content="destinedsmile - Technical Artist | VFX Artist Portfolio. Real-time game development, Unity, C#, Python, shaders, VFX, optimization, and DCC tools.">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- #TOP BRAND TOOLBAR -->
+  <div class="top-toolbar">
+    <div class="brand-badge">
+      <ion-icon name="game-controller-outline" style="color: var(--accent-primary); font-size: 26px;"></ion-icon>
+      <span class="brand-name">destinedsmile</span>
+    </div>
+  </div>
+
+  <!-- #MAIN CONTAINER -->
+  <main>
+
+    <!-- #SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.jpg" alt="Muskan Gupta - destinedsmile">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="destinedsmile">Muskan Gupta</h1>
+          <p class="title">Technical Artist | VFX Artist</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Bengaluru, India</address>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:destined.smile@gmail.com" class="contact-link">destined.smile@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Linkedin</p>
+              <a href="https://www.linkedin.com/in/muskan-gupta-destined-smile" target="_blank" class="contact-link">destined-smile</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">ArtStation</p>
+              <a href="https://www.artstation.com/the_destiny_smile" target="_blank" class="contact-link">the_destiny_smile</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Pinterest</p>
+              <a href="https://www.pinterest.com/thedestinysmile/" target="_blank" class="contact-link">thedestinysmile</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/muskan-gupta-destined-smile" class="social-link" target="_blank" title="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.artstation.com/the_destiny_smile" class="social-link" target="_blank" title="ArtStation">
+              <ion-icon name="color-palette-outline"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.pinterest.com/thedestinysmile/" class="social-link" target="_blank" title="Pinterest">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com" class="social-link" target="_blank" title="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <button class="cv-download-btn" onclick="alert('Downloading Muskan Gupta Resume...')">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <span>Download Resume</span>
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- #MAIN CONTENT CONTAINER -->
+    <div class="main-content">
+
+      <!-- #NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Skills</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!-- #ABOUT TAB -->
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hi! I’m Muskan Gupta. I’m a Technical Artist who loves bringing art and technology together to create real-time experiences.
+          </p>
+          <p>
+            I’m originally from New Delhi and currently based in Bengaluru, with 6+ years of experience across Technical Art, real-time VFX, shaders, 3D production, and game development. I’ve grown through progressive roles at Zynga, from Associate Technical Artist to Technical Artist 2, where I’ve had the opportunity to work on mobile games, new IP, and LiveOps.
+          </p>
+          <p>
+            What I enjoy most about Technical Art is solving the problems behind the visuals. Whether it’s building tools that make artists’ lives easier, creating VFX and shaders, optimizing assets and rendering performance, or improving production pipelines, I like finding practical ways to make both the creative process and the final experience better.
+          </p>
+          <p>
+            My work spans Unity, C#, Python, JavaScript, HLSL, Maya, Substance 3D, and other DCC tools. I enjoy working closely with artists, designers, and engineers, turning creative ideas into polished, efficient, and production-ready experiences.
+          </p>
+          <p>
+            For me, Technical Art is about finding the sweet spot between how something looks and how well it works — and making sure the two work beautifully together.
+          </p>
+        </section>
+
+      </article>
+
+
+      <!-- #SKILLS TAB -->
+      <article class="skills" data-page="skills">
+
+        <header>
+          <h2 class="h2 article-title">Skills & Proficiencies</h2>
+        </header>
+
+        <!-- CORE SKILLS -->
+        <section class="service">
+          <h3 class="h3 service-title">CORE SKILLS</h3>
+          <div class="skills-pointers-grid">
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Technical Art</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Game Development</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Art Pipeline Development</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Tools Development</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Pipeline Automation</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Asset & Performance Optimization</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> VFX Development</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Shader Development</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Material Workflows</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Asset Optimization</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Performance Optimization</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> GPU/CPU Profiling</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Real-Time Graphics & Rendering</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Asset Validation</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> LODs</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Batching</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Lighting</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Post-Processing</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Modeling</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Sculpting</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Texturing</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Rigging</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Animation</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Debugging</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Scripting</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Digital Painting</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Cross-Functional Collaboration</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Technical Problem Solving</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Technical Leadership</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> Project Ownership</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> New IP Development</div>
+            <div class="skill-pointer-pill"><ion-icon name="checkmark-circle-outline"></ion-icon> LiveOps</div>
+          </div>
+        </section>
+
+        <!-- TECHNICAL PROFICIENCIES -->
+        <section class="service">
+          <h3 class="h3 service-title">TECHNICAL PROFICIENCIES</h3>
+
+          <div class="proficiencies-list">
+
+            <div class="proficiency-group">
+              <h4 class="proficiency-group-title"><ion-icon name="hardware-chip-outline"></ion-icon> Game Engine & DCC Tools</h4>
+              <p class="proficiency-items">Unity, Autodesk Maya, Adobe Photoshop, After Effects, Spine, Pixologic ZBrush, Substance 3D Painter</p>
+            </div>
+
+            <div class="proficiency-group">
+              <h4 class="proficiency-group-title"><ion-icon name="code-slash-outline"></ion-icon> Programming & Scripting</h4>
+              <p class="proficiency-items">C#, Python, JavaScript</p>
+            </div>
+
+            <div class="proficiency-group">
+              <h4 class="proficiency-group-title"><ion-icon name="build-outline"></ion-icon> Tools & Pipelines</h4>
+              <p class="proficiency-items">Artist Tools, Editor Tools, Asset Validation, Asset Processing, Automation, Batch Processing, Export Tools, Profiling, Optimization</p>
+            </div>
+
+            <div class="proficiency-group">
+              <h4 class="proficiency-group-title"><ion-icon name="sparkles-outline"></ion-icon> Shader, VFX & Graphics</h4>
+              <p class="proficiency-items">HLSL, Shader Graph, Particle Systems, Real-Time VFX & Shaders, Materials, Post-Processing, Rendering</p>
+            </div>
+
+            <div class="proficiency-group">
+              <h4 class="proficiency-group-title"><ion-icon name="git-branch-outline"></ion-icon> Version Control</h4>
+              <p class="proficiency-items">Perforce, Git</p>
+            </div>
+
+            <div class="proficiency-group">
+              <h4 class="proficiency-group-title"><ion-icon name="people-outline"></ion-icon> Production & Collaboration</h4>
+              <p class="proficiency-items">Jira, Cross-Functional Collaboration, Technical Problem Solving, Pipeline Development</p>
+            </div>
+
+          </div>
+        </section>
+
+      </article>
+
+
+      <!-- #RESUME TAB -->
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume & Experience</h2>
+        </header>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <section class="timeline">
+          <div class="timeline-title-box">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3" style="color: var(--white-1); font-family: var(--font-heading);">PROFESSIONAL EXPERIENCE</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- Zynga -->
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">TECHNICAL ARTIST</h4>
+              <p style="color: var(--accent-primary); font-size: 13px; font-weight: 500; margin-bottom: 2px;">Zynga | Bengaluru, India</p>
+              <span>October 2022 – Present</span>
+              <p style="color: var(--light-gray-70); font-size: 12px; font-style: italic; margin-bottom: 10px;">
+                Career Progression: Technical Artist 2 (Apr 2026 – Present) | Technical Artist 1 (Apr 2024 – Mar 2026) | Associate Technical Artist (Oct 2022 – Mar 2024)
+              </p>
+              
+              <ul class="timeline-pointers-list">
+                <li>Contributed to Zynga’s FarmVille portfolio, including FarmVille 2: Country Escape, FarmVille 2: Tropic Escape, and FarmVille 2, as well as new IP development including FairyTiles, a tile-matching game.</li>
+                <li>Supported Unity-based mobile game development across Technical Art, VFX, shaders, materials, rendering, and art pipelines.</li>
+                <li>Built artist tools using Python, C# and JavaScript that reduced repetitive processing time by approximately 50%, improved asset validation and production workflows.</li>
+                <li>Developed and optimized real-time VFX, shaders, materials, and post-processing effects while maintaining visual quality and performance.</li>
+                <li>Optimized assets, scenes, textures, LODs, draw calls, batching, and memory usage for mobile platforms, reducing texture memory usage by approximately 40%.</li>
+                <li>Performed GPU/CPU profiling and resolved rendering and performance bottlenecks.</li>
+                <li>Supported new IP and LiveOps development, collaborating within a 70+ member cross-functional team of artists, designers, engineers, and other disciplines to deliver scalable production solutions.</li>
+                <li>Led technical art initiatives and provided guidance on pipelines, workflows, optimization, and real-time visual quality.</li>
+              </ul>
+            </li>
+
+            <!-- 3DPix Studio -->
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">3D Rigging & Animation Artist</h4>
+              <p style="color: var(--accent-primary); font-size: 13px; font-weight: 500; margin-bottom: 2px;">3DPix Studio | New Delhi, India</p>
+              <span>October 2021 – October 2022</span>
+              
+              <ul class="timeline-pointers-list">
+                <li>Contributed to the production of the studio's two primary 3D mobile games and animated short films, supporting the studio across asset creation and production workflows.</li>
+                <li>Rigged 45+ characters and props for game engines and animation production.</li>
+                <li>Optimized scenes, assets, materials, and animations for production and real-time requirements.</li>
+                <li>Collaborated with the team to design and develop 3D scenes and mobile game content.</li>
+                <li>Developed around 8+ Python tools in Maya to automate repetitive production tasks and improve workflows.</li>
+                <li>Created 2D animated films across the production pipeline, including storyboarding, digital painting, animation, editing, and compositing.</li>
+              </ul>
+            </li>
+
+            <!-- Freelance -->
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">3D & 2D Generalist</h4>
+              <p style="color: var(--accent-primary); font-size: 13px; font-weight: 500; margin-bottom: 2px;">Freelance | New Delhi, India</p>
+              <span>December 2019 – September 2021</span>
+              
+              <ul class="timeline-pointers-list">
+                <li>Delivered 15+ 2D and 3D projects for brands, companies, startups, and independent clients.</li>
+                <li>Executed end-to-end 3D production, including modeling, texturing, rigging, animation, lighting, VFX, and compositing.</li>
+                <li>Created 2D visual content including digital painting, vector artwork, logo design, brochures, and promotional assets.</li>
+                <li>Provided 3D pipeline and production consulting, advising clients on workflows, pipeline structure, and content management.</li>
+                <li>Managed projects from concept through final delivery, adapting workflows and techniques to meet artistic, technical, and project requirements.</li>
+              </ul>
+            </li>
+
+          </ol>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="timeline">
+          <div class="timeline-title-box">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3" style="color: var(--white-1); font-family: var(--font-heading);">EDUCATION</h3>
+          </div>
+
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Master of Business Administration</h4>
+              <p style="color: var(--accent-primary); font-size: 13px;">Delhi University – School of Open Learning | New Delhi, India</p>
+              <span>2023 – 2025</span>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">AD3D Edge Plus, Advanced Program in 3D Animation and Gaming</h4>
+              <p style="color: var(--accent-primary); font-size: 13px;">Maya Academy of Advanced Cinematics (MAAC), Preet Vihar | New Delhi, India</p>
+              <span>2018 – 2021</span>
+            </li>
+          </ol>
+        </section>
+
+      </article>
+
+
+      <!-- #PORTFOLIO TAB -->
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio Showcase</h2>
+        </header>
+
+        <!-- Category Filter -->
+        <ul class="filter-list">
+          <li class="filter-item"><button class="active" data-filter-btn="all">All</button></li>
+          <li class="filter-item"><button data-filter-btn="vfx">Real-Time VFX</button></li>
+          <li class="filter-item"><button data-filter-btn="tools">Tools & Automation</button></li>
+          <li class="filter-item"><button data-filter-btn="rigging">Character Rigging</button></li>
+          <li class="filter-item"><button data-filter-btn="shaders">HLSL & Shaders</button></li>
+        </ul>
+
+        <!-- Projects Grid Linked to ArtStation -->
+        <ul class="project-list">
+
+          <li class="project-item" data-filter-item data-category="vfx shaders">
+            <div class="project-card" data-desc="Real-time mobile particle VFX, custom Shader Graph materials, and dynamic visual effects published on ArtStation. Engineered for Zynga titles including FairyTiles and FarmVille portfolio." data-artstation="https://www.artstation.com/the_destiny_smile">
+              <figure class="project-img">
+                <img src="./assets/images/project-1.jpg" alt="Real-Time Mobile VFX Showcase">
+                <div class="project-item-icon-box">
+                  <ion-icon name="logo-artstation"></ion-icon>
+                </div>
+              </figure>
+              <div class="project-details">
+                <div>
+                  <h3 class="project-title">Real-Time Mobile VFX & Particle Systems</h3>
+                  <p class="project-category">ArtStation Post • Unity & Shader Graph</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-item" data-filter-item data-category="tools rigging">
+            <div class="project-card" data-desc="Custom Maya Python & Unity C# pipeline automation toolset published on ArtStation. Features automated character skeleton rigging for 45+ assets, skin weight transfer scripts, and FBX exporter." data-artstation="https://www.artstation.com/the_destiny_smile">
+              <figure class="project-img">
+                <img src="./assets/images/project-2.jpg" alt="Maya Python Pipeline Tools">
+                <div class="project-item-icon-box">
+                  <ion-icon name="logo-artstation"></ion-icon>
+                </div>
+              </figure>
+              <div class="project-details">
+                <div>
+                  <h3 class="project-title">Maya Python Auto-Rigging & Pipeline Toolset</h3>
+                  <p class="project-category">ArtStation Post • Python & Maya API</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-item" data-filter-item data-category="shaders vfx">
+            <div class="project-card" data-desc="Mobile GPU performance profiling and texture memory optimization suite published on ArtStation. Showcases ~40% texture memory compression, ASTC packing, and HLSL raymarching shader effects." data-artstation="https://www.artstation.com/the_destiny_smile">
+              <figure class="project-img">
+                <img src="./assets/images/blog-1.jpg" alt="Mobile Asset & Texture Profiling">
+                <div class="project-item-icon-box">
+                  <ion-icon name="logo-artstation"></ion-icon>
+                </div>
+              </figure>
+              <div class="project-details">
+                <div>
+                  <h3 class="project-title">HLSL Custom Shaders & Texture Optimization</h3>
+                  <p class="project-category">ArtStation Post • HLSL & GPU Profiling</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-item" data-filter-item data-category="rigging">
+            <div class="project-card" data-desc="Character and prop rigging pipeline breakdown published on ArtStation. Showcases 45+ rigged production assets for 3D mobile games and 2D animated short films." data-artstation="https://www.artstation.com/the_destiny_smile">
+              <figure class="project-img">
+                <img src="./assets/images/project-2.jpg" alt="3D Character Rigging & Animation">
+                <div class="project-item-icon-box">
+                  <ion-icon name="logo-artstation"></ion-icon>
+                </div>
+              </figure>
+              <div class="project-details">
+                <div>
+                  <h3 class="project-title">3D Character Rigging & Production Assets</h3>
+                  <p class="project-category">ArtStation Post • Maya, Skinning & Spine 2D</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+      </article>
+
+
+      <!-- #CONTACT TAB -->
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <!-- Location Map Embed (Bengaluru, India) -->
+        <section class="mapbox">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.49085452814876!3d12.95395998811802!2m3!1f0!1f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8380f5f820790b0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            title="Location Map - Bengaluru, India">
+          </iframe>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+          <h3 class="h3 form-title">Get In Touch</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full Name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email Address" required data-form-input>
+            </div>
+
+            <input type="text" name="subject" class="form-input" placeholder="Subject / Project Inquiry" style="margin-bottom: 20px;" required data-form-input>
+
+            <textarea name="message" class="form-input" placeholder="Your Message..." required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" data-form-btn>
+              <ion-icon name="paper-plane-outline"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <!-- #MODAL LIGHTBOX DIALOG -->
+  <div class="modal-container" data-modal-container>
+    <div class="modal-box">
+      <button class="modal-close-btn" data-modal-close-btn title="Close Window">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="modal-img-wrapper">
+        <img src="" alt="Modal Preview" data-modal-img>
+      </div>
+
+      <h3 class="modal-title" data-modal-title>Modal Title</h3>
+      <p class="modal-meta" data-modal-meta>Category</p>
+      <p class="modal-text" data-modal-text>Detailed description text goes here...</p>
+
+      <div class="modal-actions" data-modal-actions>
+        <!-- Dynamic buttons appended here -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- #TOAST NOTIFICATION -->
+  <div class="toast-notification" data-toast>
+    <ion-icon name="checkmark-circle-outline" style="color: var(--accent-primary); font-size: 24px;"></ion-icon>
+    <div>
+      <h4 style="font-size: 14px; font-weight: 600;">Message Sent!</h4>
+      <p style="font-size: 12px; opacity: 0.8;">Thank you for reaching out. I will respond shortly.</p>
+    </div>
+  </div>
+
+
+  <!-- Ionicons Icons Script -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Application JS Logic -->
+  <script src="./script.js"></script>
+</body>
+
+</html>
