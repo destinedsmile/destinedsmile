@@ -175,7 +175,13 @@ if (contactForm) {
         body: JSON.stringify(Object.fromEntries(formData))
       })
       .then(response => response.json())
-      .then(() => {
+      .then(data => {
+        if (data && (data.success === 'false' || data.success === false)) {
+          // If AJAX response requires standard form POST for initial activation
+          contactForm.submit();
+          return;
+        }
+
         if (formBtn) {
           formBtn.innerHTML = '<ion-icon name="checkmark-done-outline"></ion-icon><span>Sent!</span>';
           formBtn.disabled = false;
