@@ -500,44 +500,83 @@
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
-        <!-- Contact Form -->
-        <section class="contact-form">
-          <h3 class="h3 form-title">Get In Touch</h3>
+        <!-- Contact Overview & Description -->
+        <section class="about-text" style="margin-bottom: 30px;">
+          <h3 class="h3 form-title" style="margin-bottom: 12px;">Get In Touch</h3>
+          <p style="color: var(--light-gray); line-height: 1.7; font-size: 15px; margin-bottom: 14px;">
+            I’m always open to discussing new technical art opportunities, real-time VFX production, custom shader development, game pipeline automation, or potential creative collaborations.
+          </p>
+          <p style="color: var(--light-gray); line-height: 1.7; font-size: 15px;">
+            Whether you have a project inquiry, a technical question, or would like to discuss working together — feel free to drop me a direct email or connect with me via LinkedIn and ArtStation.
+          </p>
+        </section>
 
-          <!-- Direct Email Quick Card -->
-          <div style="background: var(--border-gradient-onyx); padding: 16px 20px; border-radius: 14px; margin-bottom: 25px; border: 1px solid var(--jet); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="background: var(--onyx); padding: 10px; border-radius: 10px; color: var(--accent-primary); font-size: 20px; display: flex;">
-                <ion-icon name="mail-outline"></ion-icon>
+        <!-- Direct Email Panel -->
+        <section class="contact-card-panel" style="background: var(--border-gradient-onyx); padding: 24px; border-radius: 16px; border: 1px solid var(--jet); margin-bottom: 30px;">
+
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="background: var(--onyx); padding: 14px; border-radius: 12px; color: var(--accent-primary); font-size: 26px; display: flex; box-shadow: var(--shadow-1);">
+                <ion-icon name="mail-unread-outline"></ion-icon>
               </div>
               <div>
-                <p style="font-size: 11px; text-transform: uppercase; color: var(--light-gray-70); letter-spacing: 0.5px;">Direct Email</p>
-                <a href="mailto:destined.smile@gmail.com" style="color: var(--white-2); font-weight: 500; font-size: 15px;">destined.smile@gmail.com</a>
+                <p style="font-size: 12px; text-transform: uppercase; color: var(--light-gray-70); letter-spacing: 0.8px; font-weight: 500;">Direct Email</p>
+                <a href="mailto:destined.smile@gmail.com" style="color: var(--white-2); font-weight: 600; font-size: 18px;">destined.smile@gmail.com</a>
               </div>
             </div>
-            <button id="copy-email-btn" type="button" style="background: var(--onyx); color: var(--accent-primary); border: 1px solid var(--jet); padding: 8px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: 0.2s ease;">
-              <ion-icon name="copy-outline"></ion-icon>
-              <span>Copy Email</span>
-            </button>
+
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="mailto:destined.smile@gmail.com" style="background: var(--accent-primary); color: var(--smoky-black); font-weight: 600; padding: 10px 18px; border-radius: 10px; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: 0.2s ease;">
+                <ion-icon name="paper-plane-outline" style="font-size: 18px;"></ion-icon>
+                <span>Send Email</span>
+              </a>
+              <button id="copy-email-btn" type="button" style="background: var(--onyx); color: var(--accent-primary); border: 1px solid var(--jet); padding: 10px 18px; border-radius: 10px; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-weight: 500; transition: 0.2s ease;">
+                <ion-icon name="copy-outline" style="font-size: 18px;"></ion-icon>
+                <span>Copy Email</span>
+              </button>
+            </div>
           </div>
 
-          <form action="#" class="form" data-form>
+          <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+            <p style="font-size: 13px; color: var(--light-gray-70); display: flex; align-items: center; gap: 6px;">
+              <ion-icon name="time-outline" style="color: var(--accent-primary);"></ion-icon>
+              <span>Typical response time: Within 24-48 hours</span>
+            </p>
+            <p style="font-size: 13px; color: var(--light-gray-70); display: flex; align-items: center; gap: 6px;">
+              <ion-icon name="location-outline" style="color: var(--accent-primary);"></ion-icon>
+              <span>Based in Bengaluru, India</span>
+            </p>
+          </div>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full Name" required data-form-input>
-              <input type="email" name="email" class="form-input" placeholder="Email Address" required data-form-input>
-            </div>
+        </section>
 
-            <input type="text" name="subject" class="form-input" placeholder="Subject / Project Inquiry" style="margin-bottom: 20px;" required data-form-input>
+        <!-- Professional Connect Grid -->
+        <section class="connect-grid">
+          <h3 class="h3 form-title" style="margin-bottom: 16px;">Other Ways To Connect</h3>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+            
+            <a href="https://www.linkedin.com/in/muskan-gupta-destined-smile" target="_blank" style="background: var(--border-gradient-onyx); border: 1px solid var(--jet); padding: 16px 20px; border-radius: 12px; display: flex; align-items: center; gap: 12px; text-decoration: none; transition: transform 0.2s ease;">
+              <div style="background: var(--onyx); padding: 10px; border-radius: 10px; color: #0077b5; font-size: 22px; display: flex;">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </div>
+              <div>
+                <p style="font-size: 14px; font-weight: 600; color: var(--white-2);">LinkedIn</p>
+                <p style="font-size: 12px; color: var(--light-gray-70);">destined-smile</p>
+              </div>
+            </a>
 
-            <textarea name="message" class="form-input" placeholder="Your Message..." required data-form-input></textarea>
+            <a href="https://www.artstation.com/the_destiny_smile" target="_blank" style="background: var(--border-gradient-onyx); border: 1px solid var(--jet); padding: 16px 20px; border-radius: 12px; display: flex; align-items: center; gap: 12px; text-decoration: none; transition: transform 0.2s ease;">
+              <div style="background: var(--onyx); padding: 10px; border-radius: 10px; color: #13aff0; font-size: 22px; display: flex;">
+                <ion-icon name="color-palette-outline"></ion-icon>
+              </div>
+              <div>
+                <p style="font-size: 14px; font-weight: 600; color: var(--white-2);">ArtStation</p>
+                <p style="font-size: 12px; color: var(--light-gray-70);">the_destiny_smile</p>
+              </div>
+            </a>
 
-            <button class="form-btn" type="submit" data-form-btn>
-              <ion-icon name="paper-plane-outline"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
+          </div>
         </section>
 
       </article>
