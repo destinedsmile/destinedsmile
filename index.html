@@ -500,21 +500,15 @@
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
-        <!-- Location Map Embed (Bengaluru, India) -->
-        <section class="mapbox">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d77.49085452814876!3d12.95395998811802!2m3!1f0!1f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8380f5f820790b0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade" 
-            title="Location Map - Bengaluru, India">
-          </iframe>
-        </section>
-
         <!-- Contact Form -->
         <section class="contact-form">
           <h3 class="h3 form-title">Get In Touch</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="https://formsubmit.co/destined.smile@gmail.com" method="POST" class="form" data-form>
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Website Message from Portfolio">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full Name" required data-form-input>
@@ -531,6 +525,10 @@
             </button>
 
           </form>
+
+          <div style="margin-top: 20px; text-align: center;">
+            <p style="font-size: 13px; color: var(--light-gray-70);">Or email directly at <a href="mailto:destined.smile@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">destined.smile@gmail.com</a></p>
+          </div>
         </section>
 
       </article>

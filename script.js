@@ -158,23 +158,46 @@ if (contactForm) {
     });
 
     if (valid) {
+      const originalBtnHtml = formBtn ? formBtn.innerHTML : '';
       if (formBtn) {
-        formBtn.innerHTML = '<ion-icon name="checkmark-done-outline"></ion-icon> Sent!';
+        formBtn.innerHTML = '<ion-icon name="sync-outline"></ion-icon><span>Sending...</span>';
+        formBtn.disabled = true;
       }
 
-      // Show Toast Notification
-      if (toast) {
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 4000);
-      }
+      const formData = new FormData(contactForm);
 
-      contactForm.reset();
-
-      setTimeout(() => {
+      fetch('https://formsubmit.co/ajax/destined.smile@gmail.com', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData))
+      })
+      .then(response => response.json())
+      .then(() => {
         if (formBtn) {
-          formBtn.innerHTML = '<ion-icon name="paper-plane-outline"></ion-icon><span>Send Message</span>';
+          formBtn.innerHTML = '<ion-icon name="checkmark-done-outline"></ion-icon><span>Sent!</span>';
+          formBtn.disabled = false;
         }
-      }, 3000);
+
+        if (toast) {
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 4000);
+        }
+
+        contactForm.reset();
+
+        setTimeout(() => {
+          if (formBtn) {
+            formBtn.innerHTML = originalBtnHtml;
+          }
+        }, 3000);
+      })
+      .catch(error => {
+        console.error('Submission error:', error);
+        contactForm.submit();
+      });
     }
   });
 }
