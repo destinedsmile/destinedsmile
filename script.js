@@ -137,7 +137,23 @@ if (modalContainer) {
   });
 }
 
-// Contact Form Handler & Toast Notification
+// Copy Email Button Handler
+const copyEmailBtn = document.getElementById('copy-email-btn');
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', function () {
+    navigator.clipboard.writeText('destined.smile@gmail.com').then(() => {
+      const originalText = this.innerHTML;
+      this.innerHTML = '<ion-icon name="checkmark-outline"></ion-icon><span>Copied!</span>';
+      setTimeout(() => {
+        this.innerHTML = originalText;
+      }, 2500);
+    }).catch(err => {
+      console.error('Copy failed:', err);
+    });
+  });
+}
+
+// Contact Form Handler & Mail Composer
 const contactForm = document.querySelector('[data-form]');
 const formInputs = document.querySelectorAll('[data-form-input]');
 const formBtn = document.querySelector('[data-form-btn]');
@@ -158,52 +174,35 @@ if (contactForm) {
     });
 
     if (valid) {
-      const originalBtnHtml = formBtn ? formBtn.innerHTML : '';
+      const fullname = contactForm.querySelector('[name="fullname"]').value;
+      const email = contactForm.querySelector('[name="email"]').value;
+      const subject = contactForm.querySelector('[name="subject"]').value;
+      const message = contactForm.querySelector('[name="message"]').value;
+
+      // Construct Mailto URL
+      const mailtoSubject = encodeURIComponent(`[Portfolio Inquiry] ${subject}`);
+      const mailtoBody = encodeURIComponent(`Name: ${fullname}\nSender Email: ${email}\n\nMessage:\n${message}`);
+      const mailtoUrl = `mailto:destined.smile@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
       if (formBtn) {
-        formBtn.innerHTML = '<ion-icon name="sync-outline"></ion-icon><span>Sending...</span>';
-        formBtn.disabled = true;
+        formBtn.innerHTML = '<ion-icon name="mail-open-outline"></ion-icon><span>Opening Mail...</span>';
       }
 
-      const formData = new FormData(contactForm);
+      // Trigger Mail Client
+      window.location.href = mailtoUrl;
 
-      fetch('https://formsubmit.co/ajax/destined.smile@gmail.com', {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(Object.fromEntries(formData))
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data && (data.success === 'false' || data.success === false)) {
-          // If AJAX response requires standard form POST for initial activation
-          contactForm.submit();
-          return;
-        }
+      // Show Toast Notification
+      if (toast) {
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 5000);
+      }
 
+      setTimeout(() => {
         if (formBtn) {
-          formBtn.innerHTML = '<ion-icon name="checkmark-done-outline"></ion-icon><span>Sent!</span>';
-          formBtn.disabled = false;
+          formBtn.innerHTML = '<ion-icon name="paper-plane-outline"></ion-icon><span>Send Message</span>';
         }
-
-        if (toast) {
-          toast.classList.add('show');
-          setTimeout(() => toast.classList.remove('show'), 4000);
-        }
-
         contactForm.reset();
-
-        setTimeout(() => {
-          if (formBtn) {
-            formBtn.innerHTML = originalBtnHtml;
-          }
-        }, 3000);
-      })
-      .catch(error => {
-        console.error('Submission error:', error);
-        contactForm.submit();
-      });
+      }, 3000);
     }
   });
 }
