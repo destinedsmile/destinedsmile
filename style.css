@@ -549,35 +549,65 @@ article.active {
   font-size: 16px;
 }
 
-/* Technical Proficiencies Group List */
-.proficiencies-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.proficiency-group {
-  background: var(--onyx);
-  padding: 20px;
+/* Technical Proficiencies Single Scrollable Card Container */
+.proficiencies-single-card {
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
   border-radius: var(--radius-18);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px 24px;
+  max-height: 380px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--onyx);
 }
 
-.proficiency-group-title {
+.proficiencies-single-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.proficiencies-single-card::-webkit-scrollbar-track {
+  background: var(--onyx);
+  border-radius: 10px;
+}
+
+.proficiencies-single-card::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 10px;
+}
+
+.proficiency-row {
+  padding: 10px 0;
+}
+
+.proficiency-row:first-child {
+  padding-top: 0;
+}
+
+.proficiency-row:last-child {
+  padding-bottom: 0;
+}
+
+.proficiency-row-title {
   color: var(--accent-primary);
   font-size: var(--fs-4);
   font-weight: var(--fw-600);
   font-family: var(--font-heading);
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+.proficiency-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 6px 0;
+}
+
 .proficiency-items {
   color: var(--light-gray-70);
   font-size: var(--fs-5);
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /*-----------------------------------*\
