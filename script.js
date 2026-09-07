@@ -14,6 +14,17 @@ if (sidebarBtn) {
   });
 }
 
+// Collapsible Experience Timeline Items Handler
+const timelineToggles = document.querySelectorAll('[data-timeline-toggle]');
+timelineToggles.forEach(toggle => {
+  toggle.addEventListener('click', function () {
+    const timelineItem = this.closest('[data-timeline-item]');
+    if (timelineItem) {
+      timelineItem.classList.toggle('collapsed');
+    }
+  });
+});
+
 // Navigation Tab Switching
 const navigationLinks = document.querySelectorAll('[data-nav-link]');
 const pages = document.querySelectorAll('[data-page]');
