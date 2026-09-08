@@ -1174,6 +1174,10 @@ textarea.form-input {
   .main-content {
     width: 100%;
     padding-bottom: 90px !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none !important;
+    transform: none !important;
   }
 }
 
