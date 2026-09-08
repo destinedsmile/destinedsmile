@@ -674,6 +674,7 @@ article.active {
   font-size: 16px;
   color: var(--light-gray-70);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
 }
 
 .timeline-header-toggle:hover .timeline-toggle-btn {
@@ -683,16 +684,24 @@ article.active {
 }
 
 .timeline-collapsible .timeline-details-content {
-  max-height: 5000px;
+  display: grid;
+  grid-template-rows: 1fr;
+  max-height: 1000px;
   opacity: 1;
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+.timeline-details-inner {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .timeline-collapsible.collapsed .timeline-details-content {
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
+  grid-template-rows: 0fr !important;
+  max-height: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .timeline-collapsible.collapsed .timeline-toggle-btn ion-icon {
@@ -859,6 +868,21 @@ article.active {
   height: 100%;
   border: none;
   filter: grayscale(80%) invert(90%) contrast(120%);
+}
+
+.contact-card-email-link {
+  color: var(--white-2);
+  font-weight: 600;
+  font-size: 18px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  display: inline-block;
+  max-width: 100%;
+  transition: color 0.2s ease;
+}
+
+.contact-card-email-link:hover {
+  color: var(--accent-primary);
 }
 
 .contact-form {
@@ -1216,5 +1240,11 @@ textarea.form-input {
   }
   .modal-img-wrapper {
     height: 200px;
+  }
+  .contact-card-panel {
+    padding: 18px 14px !important;
+  }
+  .contact-card-email-link {
+    font-size: 13.5px !important;
   }
 }

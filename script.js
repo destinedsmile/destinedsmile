@@ -14,16 +14,16 @@ if (sidebarBtn) {
   });
 }
 
-// Collapsible Experience Timeline Items Handler
-const timelineToggles = document.querySelectorAll('[data-timeline-toggle]');
-timelineToggles.forEach(toggle => {
-  toggle.addEventListener('click', function () {
-    const timelineItem = this.closest('[data-timeline-item]');
-    if (timelineItem) {
-      timelineItem.classList.toggle('collapsed');
-    }
-  });
-});
+// Explicit Collapsible Experience Timeline Items Handler
+window.toggleTimeline = function (el, e) {
+  if (e) {
+    if (e.stopPropagation) e.stopPropagation();
+  }
+  const timelineItem = el.closest('[data-timeline-item]');
+  if (timelineItem) {
+    timelineItem.classList.toggle('collapsed');
+  }
+};
 
 // Navigation Tab Switching
 const navigationLinks = document.querySelectorAll('[data-nav-link]');
