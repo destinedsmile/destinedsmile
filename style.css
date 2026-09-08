@@ -1092,6 +1092,7 @@ textarea.form-input {
 @media (max-width: 768px) {
   main {
     flex-direction: column;
+    gap: 20px;
   }
   
   .sidebar {
@@ -1127,6 +1128,22 @@ textarea.form-input {
     cursor: pointer;
   }
 
+  /* Unwrap main-content so fixed navbar attaches directly to viewport window */
+  .main-content {
+    display: contents !important;
+  }
+
+  /* Style active article as card on mobile */
+  article.active {
+    background: var(--eerie-black-2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: var(--radius-24) !important;
+    padding: 24px 20px 100px 20px !important;
+    box-shadow: var(--shadow-2) !important;
+    width: 100% !important;
+  }
+
+  /* Permanently Pinned Bottom Navigation Bar at All Times (Top Scroll & Bottom Scroll) */
   .navbar {
     position: fixed !important;
     bottom: 0 !important;
@@ -1134,13 +1151,15 @@ textarea.form-input {
     right: 0 !important;
     top: auto !important;
     width: 100% !important;
-    background: rgba(22, 22, 28, 0.95) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
+    background: rgba(22, 22, 28, 0.96) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
     border-radius: 20px 20px 0 0 !important;
     border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7) !important;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.8) !important;
     z-index: 999999 !important;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 
   .navbar-list {
@@ -1169,15 +1188,6 @@ textarea.form-input {
 
   .navbar-link.active::after {
     display: none !important;
-  }
-
-  .main-content {
-    width: 100%;
-    padding-bottom: 90px !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-    filter: none !important;
-    transform: none !important;
   }
 }
 
