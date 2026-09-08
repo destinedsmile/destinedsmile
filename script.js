@@ -31,7 +31,7 @@ const pages = document.querySelectorAll('[data-page]');
 
 navigationLinks.forEach((navLink) => {
   navLink.addEventListener('click', function () {
-    const targetPage = this.innerHTML.toLowerCase().trim();
+    const targetPage = (this.getAttribute('data-nav-link') || this.textContent).toLowerCase().trim();
 
     navigationLinks.forEach(link => link.classList.remove('active'));
     this.classList.add('active');
